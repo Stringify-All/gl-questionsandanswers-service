@@ -1,5 +1,6 @@
+/* eslint-disable import/extensions */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import RelatedItems from './components/App.jsx';
+import App from './components/App.jsx';
 
-ReactDOM.render(<RelatedItems />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('app'));
