@@ -1,16 +1,14 @@
 import React from 'react';
-
 // eslint-disable-next-line arrow-body-style
 const ProductQuestionForm = (props) => {
-  console.log('inquestionform');
-  const productQuestion = props.question;
+  const productQuestion = props.productQuestion;
   // console.log('props', props);
   // console.log('productQuestion', productQuestion);
   return (
-
     <div className="lines p2-a">
       {
-      `User: ${productQuestion.asker_name}`
+        `${productQuestion.asker_name}`.concat(
+          ` asked: ${productQuestion.question_body}`)
     }
     </div>
   );
