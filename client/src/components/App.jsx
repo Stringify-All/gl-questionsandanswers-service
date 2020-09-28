@@ -2,22 +2,21 @@
 import React, { useState, useEffect } from 'react';
 import GlobalStyle from './globalStyle';
 import getProductQuestionGet from '../api/getproductquestion';
-// import getProductAnswerGet from '../api/getproductanswer';
-// import ProductQuestionForm from '../modules/productQuestion.jsx';
-import ProductQuestionMap from '../modules/productQuestionMap.jsx';
+import ProductQuestionForm from '../modules/productQuestion.jsx';
 import ProductAnswerForm from '../modules/productAnswer.jsx';
-// import ProductAnswerList from '../modules/productAnswerMap.jsx';
+// import ProductQuestionMap from '../modules/productQuestionMap.jsx';
 
 const App = () => {
+  const [count, setCount] = useState(1);
+  // const [count, setCount] = useState(1);
   const [userId, setuserId] = useState(3);
-  const [productQuestion, setProductQuestion] = useState([]);
+  const [productQuestion, setProductQuestion] = useState('');
   const [productAnswer, setProductAnswer] = useState(userId);
 
   useEffect(() => {
     getProductQuestionGet(userId)
       .then((res) => {
-        setProductQuestion(res.data.results);
-        console.log('product question', res.data.results);
+        setProductQuestion(res.data.results[userId]);
       })
       .catch((err) => {
         throw err;
@@ -41,8 +40,9 @@ const App = () => {
         placeholder="search"
       />
       <button type="submit" onClick={() => setCount(count * 2)}> Just Button </button>
-      <ProductQuestionMap question={productQuestion} />
+      <ProductQuestionForm question={productQuestion} />
       <ProductAnswerForm answer={productAnswer} />
+      {/* <ProductQuestionMap question={productQuestion} /> */}
       {/* <ProductAnswerList answer={productAnswer} /> */}
     </body>
   );
