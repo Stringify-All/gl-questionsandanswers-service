@@ -3,19 +3,21 @@ import React, { useState, useEffect } from 'react';
 import GlobalStyle from './globalStyle';
 import getProductQuestionGet from '../api/getproductquestion';
 // import getProductAnswerGet from '../api/getproductanswer';
-import ProductQuestionForm from '../modules/productQuestion.jsx';
+// import ProductQuestionForm from '../modules/productQuestion.jsx';
+import ProductQuestionMap from '../modules/productQuestionMap.jsx';
 import ProductAnswerForm from '../modules/productAnswer.jsx';
 // import ProductAnswerList from '../modules/productAnswerMap.jsx';
 
 const App = () => {
   const [userId, setuserId] = useState(3);
-  const [productQuestion, setProductQuestion] = useState(userId);
+  const [productQuestion, setProductQuestion] = useState([]);
   const [productAnswer, setProductAnswer] = useState(userId);
 
   useEffect(() => {
     getProductQuestionGet(userId)
       .then((res) => {
-        setProductQuestion(res.data.results[userId]);
+        setProductQuestion(res.data.results);
+        console.log('product question', res.data.results);
       })
       .catch((err) => {
         throw err;
@@ -39,7 +41,7 @@ const App = () => {
         placeholder="search"
       />
       <button type="submit" onClick={() => setCount(count * 2)}> Just Button </button>
-      <ProductQuestionForm question={productQuestion} />
+      <ProductQuestionMap question={productQuestion} />
       <ProductAnswerForm answer={productAnswer} />
       {/* <ProductAnswerList answer={productAnswer} /> */}
     </body>
