@@ -8,7 +8,6 @@ import ProductAnswerForm from '../modules/productAnswer.jsx';
 // import ProductAnswerList from '../modules/productAnswerMap.jsx';
 
 const App = () => {
-  // const [count, setCount] = useState(1);
   const [userId, setuserId] = useState(3);
   const [productQuestion, setProductQuestion] = useState(userId);
   const [productAnswer, setProductAnswer] = useState(userId);
@@ -16,21 +15,15 @@ const App = () => {
   useEffect(() => {
     getProductQuestionGet(userId)
       .then((res) => {
-        // console.log('this is data: ', res);
-        // console.log('this is results: ', res.data.results);
         setProductQuestion(res.data.results[userId]);
       })
       .catch((err) => {
         throw err;
       });
   }, []);
-  // console.log(productQuestion[1], 'data');
   useEffect(() => {
     getProductQuestionGet(userId)
       .then((res) => {
-        // console.log('answer this is data: ', res);
-        // console.log('answer this is results: ', res.data.results);
-        // console.log('answer results', Object.values(res.data.results[userId].answers));
         setProductAnswer(Object.values(res.data.results[userId].answers));
       })
       .catch((err) => {
