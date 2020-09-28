@@ -33,7 +33,7 @@ const GlobalStyle = createGlobalStyle`
     color: #056676;
     border: 1px solid-#e8ded2;
     border-radius: 4px;
-    padding: 15px 32px;
+    padding: 5px 90px;
     text-align: center;
   }
 

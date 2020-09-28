@@ -11,4 +11,3 @@ test('rendering the app component', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
-//'../client/src/components/App.jsx';
