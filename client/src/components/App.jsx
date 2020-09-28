@@ -2,22 +2,23 @@
 import React, { useState, useEffect } from 'react';
 import GlobalStyle from './globalStyle';
 import getProductQuestionGet from '../api/getproductquestion';
-import ProductQuestionForm from '../modules/productQuestion.jsx';
 import ProductAnswerForm from '../modules/productAnswer.jsx';
-// import ProductQuestionMap from '../modules/productQuestionMap.jsx';
+import ProductQuestionMap from '../modules/productQuestionMap.jsx';
+// import ProductQuestionForm from '../modules/productQuestion.jsx';
 
 const App = () => {
   const [count, setCount] = useState(1);
   // const [count, setCount] = useState(1);
   // eslint-disable-next-line no-unused-vars
   const [userId, setuserId] = useState(3);
-  const [productQuestion, setProductQuestion] = useState('');
+  const [productQuestion, setProductQuestion] = useState([]);
   const [productAnswer, setProductAnswer] = useState(userId);
 
   useEffect(() => {
     getProductQuestionGet(userId)
       .then((res) => {
-        setProductQuestion(res.data.results[userId]);
+        console.log(res.data);
+        setProductQuestion(res.data.results);
       })
       .catch((err) => {
         throw err;
@@ -41,10 +42,11 @@ const App = () => {
         placeholder="search"
       />
       <button type="submit" onClick={() => setCount(count * 2)}> Just Button </button>
-      <ProductQuestionForm question={productQuestion} />
+      <ProductQuestionMap question={productQuestion} />
       <ProductAnswerForm answer={productAnswer} />
-      {/* <ProductQuestionMap question={productQuestion} /> */}
+      {/* <ProductQuestionForm question={productQuestion} /> */}
       {/* <ProductAnswerList answer={productAnswer} /> */}
+      {/* just adding this to check branch again */}
     </body>
   );
 };

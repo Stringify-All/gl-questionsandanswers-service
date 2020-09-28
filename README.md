@@ -1,7 +1,7 @@
 To start the application
-1. Run npm install
-2. Run npm run-script build
-3. Run npm run start:server
+1. Run npm install in terminal
+2. Run npm run-script build in terminal
+3. Run npm start in another terminal
 4. Navigate to localhost:9002 in browser
 
 # Foobar
