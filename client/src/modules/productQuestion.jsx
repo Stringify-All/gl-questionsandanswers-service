@@ -4,8 +4,9 @@ import ProductAnswerMap from './productAnswerMap.jsx';
 
 const ProductQuestion = (productQuestion) => {
   const newProductQuestion = productQuestion.productQuestion;
+  // const [count, setCount] = useState(0);
   return (
-    <div className="lines p2-a">
+    <div className="answer">
       <div>
         {
       `${newProductQuestion.asker_name}`.concat(
@@ -14,6 +15,7 @@ const ProductQuestion = (productQuestion) => {
   }
       </div>
       <div>
+        <HelpfulButton newProductQuestion={newProductQuestion} />
         <ProductAnswerMap newQuestion={newProductQuestion} />
       </div>
     </div>
