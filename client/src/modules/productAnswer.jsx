@@ -2,16 +2,13 @@
 import React from 'react';
 
 // eslint-disable-next-line no-unused-vars
-const ProductAnswerForm = (props) => {
-  // const productAnswer = props.answer;
-  // const productAnswerIndex = productAnswer[0];
+const ProductAnswer = ({answer}) => {
   return (
     <div className="lines p2-b">
       {
-      `Answer: ${'No'}`
-      // `Answer; `
+      `Answer: ${answer.body}`
     }
     </div>
   );
 };
-export default ProductAnswerForm;
+export default ProductAnswer;

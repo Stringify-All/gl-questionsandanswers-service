@@ -1,17 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
+import ProductAnswerMap from './productAnswerMap.jsx';
 // eslint-disable-next-line arrow-body-style
-const ProductQuestionForm = (props) => {
-  const productQuestion = props.productQuestion;
-  // console.log('props', props);
-  // console.log('productQuestion', productQuestion);
+
+const ProductQuestion = (productQuestion) => {
+  const newProductQuestion = productQuestion.productQuestion;
   return (
     <div className="lines p2-a">
-      {
-        `${productQuestion.asker_name}`.concat(
-          ` asked: ${productQuestion.question_body}`)
-    }
+      <div>
+        {
+      `${newProductQuestion.asker_name}`.concat(
+        ` asked: ${newProductQuestion.question_body}`,
+      )
+  }
+      </div>
+      <div>
+        <ProductAnswerMap newQuestion={newProductQuestion} />
+      </div>
     </div>
+
   );
 };
-
-export default ProductQuestionForm;
+export default ProductQuestion;

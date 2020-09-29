@@ -1,15 +1,7 @@
-// const axios = require('axios');
+const axios = require('axios');
+console.log('in get request');
+const getProductAnswerGet = (Id) => axios.get(`http://52.26.193.201:3000/qa/${Id}/answers`)
+  .then((data) => data)
+  .catch((err) => { throw err; });
 
-// Questions Get Requests
-// product_id, page, count
-// GET /qa/:product_id
-
-// Answers Get Requests
-// GET /qa/:question_id/answers
-// questions_id, page, count
-
-// const getProductAnswerGet = (question_id) => axios.get(`http://52.26.193.201:3000/qa/${question_id}/answers`)
-//   .then((data) => data)
-//   .catch((err) => { throw err; });
-
-// export default getProductAnswerGet;
+export default getProductAnswerGet;
