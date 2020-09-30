@@ -12,18 +12,21 @@ const GlobalStyle = createGlobalStyle`
 
   h1 {
     font-family: 'Roboto', 'sans-serif';
-    font-weight: 500;
+    font-weight: 50;
     background-color: white;
-    font-size: 28px;
+    font-size: 20px;
     color: #056676;
+    title: 'Center Title':
+    alignSelf: 'center'
   }
 
   body {
     margin: 30 auto;
     background-color: white;
     font-family: 'Ubuntu', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     color: #056676;
+    text-align: 'center'
   }
 
   button {
@@ -44,6 +47,12 @@ const GlobalStyle = createGlobalStyle`
     box-shadow: 0 1px 0 #5eaaa8;
     transition-timing-function: ease-in;
     transition: .3s;
+  }
+
+  .answer {
+    font-family: 'Roboto', 'sans-serif';
+    font-size: 16px;
+    color: #5EAAA8;
   }
 `;
 export default GlobalStyle;

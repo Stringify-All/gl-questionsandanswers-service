@@ -8,9 +8,7 @@ const ProductQuestion = (productQuestion) => {
     <div className="lines p2-a">
       <div>
         {
-      `${newProductQuestion.asker_name}`.concat(
-        ` asked: ${newProductQuestion.question_body}`,
-      )
+        ` Q:  ${newProductQuestion.question_body}`
   }
       </div>
       <div>
