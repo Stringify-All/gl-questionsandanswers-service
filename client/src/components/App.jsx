@@ -1,25 +1,31 @@
 /* eslint-disable import/extensions */
 import React, { useState } from 'react';
-import GlobalStyle from './globalStyle';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
+import GlobalStyle from './globalStyle';
 import ProductQuestionMap from '../modules/productQuestionMap.jsx';
 // import ProductQuestionForm from '../modules/productQuestion.jsx';
 
 const App = () => (
-  <body>
-    <GlobalStyle />
-    <h2> Questions and Answers</h2>
-    <input
-      type="text"
-      placeholder="search"
-    />
-    <button type="submit" onClick={() => setCount(count * 2)}> Search </button>
-    <ProductQuestionMap/>
-  </body>
+  <>
+    <div className="container">
+      <div className="row">
+        <div className="col-md-auto">
+          username
+        </div>
+        <div className="col">
+          <h1> Questions and Answers</h1>
+          <ProductQuestionMap />
+        </div>
+        <div className="col-md-auto">
+          is it helpful
+        </div>
+      </div>
+    </div>
+<GlobalStyle />
+  </>
 );
 
 export default App;
-
-// props.answers
-// map answers
-// Object.values(on questions)
