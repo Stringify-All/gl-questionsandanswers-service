@@ -30,9 +30,14 @@ const ProductQuestion = (productQuestion) => {
           <div className="col-md-auto">
             Add Answer
           </div>
+          <div className="col-sm-4">
+            Load More Answers
+          </div>
         </div>
       </div>
     </>
   );
 };
 export default ProductQuestion;
+
+// { condition ? <div> Renders on condition </div> : <div> Doesn't render on condition</div> };

@@ -1,5 +1,8 @@
 /* eslint-disable arrow-body-style */
 import React from 'react';
+import Accordion from 'react-bootstrap/Accordion';
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 import GlobalStyle from '../components/globalStyle';
 
 // eslint-disable-next-line no-unused-vars
@@ -37,17 +40,24 @@ const ProductAnswer = ({answer}) => {
             </div>
           </div>
         </div>
-        <div className="container">
-          <div className="loadMoreAnswers">
-            <div className="row">
-              <div className="col-sm-4">
-                Load More Answers
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
 export default ProductAnswer;
+//{rating !== null && <Box ml={2}>{labels[hover !== -1 ? hover : rating]}</Box>}
+
+// { condition ? <div> Renders on condition </div> : <div> Doesn't render on condition</div> }
+
+{/* <Accordion defaultActiveKey="0">
+            <Card>
+              <Card.Header>
+                <Accordion.Toggle as={Button} variant="link" eventKey="0">
+                  Click me!
+                </Accordion.Toggle>
+              </Card.Header>
+              <Accordion.Collapse eventKey="0">
+                <Card.Body>Hello! I'm the body</Card.Body>
+              </Accordion.Collapse>
+            </Card>
+          </Accordion> */}

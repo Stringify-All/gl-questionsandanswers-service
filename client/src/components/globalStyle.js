@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Roboto', 'sans-serif';
     font-weight: 50;
     background-color: white;
-    font-size: 20px;
+    font-size: 24px;
     color: #056676;
     title: 'Center Title':
     alignSelf: 'center'
