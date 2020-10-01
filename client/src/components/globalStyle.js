@@ -48,11 +48,37 @@ const GlobalStyle = createGlobalStyle`
     transition-timing-function: ease-in;
     transition: .3s;
   }
+  .questions{
+    padding-top: 6px;
+    padding-bottom 6px;
+  }
 
   .answer {
+    padding-top: 6px;
+    padding-bottom 6px;
     font-family: 'Roboto', 'sans-serif';
     font-size: 16px;
     color: #5EAAA8;
   }
+
+  .answerInfo{
+    padding-top: 2px;
+    padding-bottom 2px;
+    font-family: 'Roboto', 'sans-serif';
+    font-size: 12px;
+    color: #a29b93;
+  }
+
+  .loadMoreAnswers{
+    padding-top: 2px;
+    padding-bottom 2px;
+    font-family: 'Roboto', 'sans-serif';
+    font-size: 16px;
+    font-weight: bold;
+    color: #a29b93;
+    text-align: left;
+  }
+
+
 `;
 export default GlobalStyle;
