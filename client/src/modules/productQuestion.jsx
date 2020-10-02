@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ProductAnswerMap from './productAnswerMap.jsx';
+import HelpfulQuestion from './questionHelpful.jsx';
 import GlobalStyle from '../components/globalStyle';
 
 const ProductQuestion = (productQuestion) => {
@@ -24,9 +25,7 @@ const ProductQuestion = (productQuestion) => {
             </div>
           </div>
           <div className="col-md-auto">
-            {
-              `Helpful? Yes (${newProductQuestion.question_helpfulness})`
-            }
+            <HelpfulQuestion helpfulBody={newProductQuestion} />
           </div>
           <div className="col-md-auto">
             Add Answer

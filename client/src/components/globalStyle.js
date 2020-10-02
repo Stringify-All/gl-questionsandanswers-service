@@ -29,6 +29,7 @@ const GlobalStyle = createGlobalStyle`
     text-align: 'center'
   }
 
+
   button {
     padding-top: 2px;
     padding-bottom 2px;
@@ -42,6 +43,7 @@ const GlobalStyle = createGlobalStyle`
     text-align: center;
   }
 
+
   button:hover {
     color: #e8ded2;
     border: 2px solid #056676;
@@ -49,6 +51,17 @@ const GlobalStyle = createGlobalStyle`
     box-shadow: 0 1px 0 #5eaaa8;
     transition-timing-function: ease-in;
     transition: .3s;
+  }
+  .helpfulbutton {
+    padding-top: 2px;
+    padding-bottom 2px;
+    background-color: white;
+    font-family: 'Ubuntu', sans-serif;
+    color: #a29b93;
+    border: none;
+    padding: none;
+    border-radius: none
+    text-align: center;
   }
   .questions{
     padding-top: 6px;

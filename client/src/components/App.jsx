@@ -18,9 +18,6 @@ const App = () => (
     <div className="container">
       <div className="row">
         <div className="col-md-auto">
-          <button type="submit"> More Questions </button>
-        </div>
-        <div className="col-md-auto">
           <button type="submit"> Add a Question </button>
         </div>
       </div>
