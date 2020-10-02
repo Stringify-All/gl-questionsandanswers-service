@@ -40,7 +40,7 @@ const ProductQuestionMap = () => {
         <Accordion.Toggle className="button" as={Card.Header} varient="link" eventKey="0"
           onClick={() => setBoolean(!boolean)}
         >
-          {boolean && 'Load More Answers'} {!boolean && 'See Less Answers'}
+          {boolean && 'Load More Questions'} {!boolean && 'See Less Questions'}
         </Accordion.Toggle>
       </Accordion>
       )}
