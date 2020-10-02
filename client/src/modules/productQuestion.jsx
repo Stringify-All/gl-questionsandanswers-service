@@ -4,7 +4,8 @@ import GlobalStyle from '../components/globalStyle';
 
 const ProductQuestion = (productQuestion) => {
   const newProductQuestion = productQuestion.productQuestion;
-  console.log(newProductQuestion);
+  console.log('questionss', newProductQuestion);
+  console.log('question answers array', newProductQuestion.answers);
   return (
     <>
       <GlobalStyle />
@@ -29,9 +30,6 @@ const ProductQuestion = (productQuestion) => {
           </div>
           <div className="col-md-auto">
             Add Answer
-          </div>
-          <div className="col-sm-4">
-            Load More Answers
           </div>
         </div>
       </div>

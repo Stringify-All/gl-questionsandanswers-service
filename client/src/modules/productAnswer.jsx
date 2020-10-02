@@ -4,9 +4,10 @@ import Accordion from 'react-bootstrap/Accordion';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import GlobalStyle from '../components/globalStyle';
-
+import ProductQuestion from './productQuestion.jsx';
 // eslint-disable-next-line no-unused-vars
 const ProductAnswer = ({answer}) => {
+
   console.log('answer', answer);
   return (
     <div className="answer">
@@ -49,15 +50,3 @@ export default ProductAnswer;
 
 // { condition ? <div> Renders on condition </div> : <div> Doesn't render on condition</div> }
 
-{/* <Accordion defaultActiveKey="0">
-            <Card>
-              <Card.Header>
-                <Accordion.Toggle as={Button} variant="link" eventKey="0">
-                  Click me!
-                </Accordion.Toggle>
-              </Card.Header>
-              <Accordion.Collapse eventKey="0">
-                <Card.Body>Hello! I'm the body</Card.Body>
-              </Accordion.Collapse>
-            </Card>
-          </Accordion> */}
