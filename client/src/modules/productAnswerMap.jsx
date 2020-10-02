@@ -27,28 +27,33 @@ const ProductAnswerMap = ({ newQuestion }) => {
   }, [questionId]);
 
   const mappedProductAnswers = answerId.map((answerArray, i) => (
-    <ProductAnswer answer={answerArray} keys={i}/>));
+    <ProductAnswer answer={answerArray} keys={i} />));
   const [boolean, setBoolean] = useState(true);
 
   return (
-    <div className="mapProductAnswer">
-      <GlobalStyle />
-      {mappedProductAnswers.slice(0, 2)}
-      {mappedProductAnswers.length > 2 && (
-      <Accordion>
-        <Accordion.Collapse eventKey="0">
-          <div>
-            {mappedProductAnswers.slice(2)}
+    <div className="button">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-auto">
+            <GlobalStyle />
+            {mappedProductAnswers.slice(0, 2)}
+            {mappedProductAnswers.length > 2 && (
+            <Accordion>
+              <Accordion.Collapse eventKey="0">
+                <div>
+                  {mappedProductAnswers.slice(2)}
+                </div>
+              </Accordion.Collapse>
+              <Accordion.Toggle className="button" as={Card.Header} varient="link" eventKey="0"
+                onClick={() => setBoolean(!boolean)}
+              >
+                {boolean && 'Load More Answers'} {!boolean && 'See Less Answers'}
+              </Accordion.Toggle>
+            </Accordion>
+            )}
           </div>
-        </Accordion.Collapse>
-        <Accordion.Toggle className="button" as={Card.Header} varient="link" eventKey="0"
-          onClick={() => setBoolean(!boolean)}
-        >
-          {boolean && 'Load More Answers'} {!boolean && 'See Less Answers'}
-        </Accordion.Toggle>
-      </Accordion>
-      )}
-
+        </div>
+      </div>
     </div>
   );
 };
