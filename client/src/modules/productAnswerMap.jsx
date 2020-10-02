@@ -44,7 +44,7 @@ const ProductAnswerMap = ({ newQuestion }) => {
                   {mappedProductAnswers.slice(2)}
                 </div>
               </Accordion.Collapse>
-              <Accordion.Toggle className="button" as={Card.Header} varient="link" eventKey="0"
+              <Accordion.Toggle className="button" varient="link" eventKey="0"
                 onClick={() => setBoolean(!boolean)}
               >
                 {boolean && 'Load More Answers'} {!boolean && 'See Less Answers'}

@@ -30,6 +30,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   button {
+    padding-top: 2px;
+    padding-bottom 2px;
     background-color: white;
     font-family: 'Ubuntu', sans-serif;
     border-color: #056676;
