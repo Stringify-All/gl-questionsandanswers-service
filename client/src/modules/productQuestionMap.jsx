@@ -4,7 +4,6 @@
 
 import React, { useState, useEffect } from 'react';
 import Accordion from 'react-bootstrap/Accordion';
-import Card from 'react-bootstrap/Card';
 import ProductQuestion from './productQuestion.jsx';
 import getProductQuestionGet from '../api/getproductquestion';
 import GlobalStyle from '../components/globalStyle';

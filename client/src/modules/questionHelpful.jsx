@@ -3,7 +3,6 @@ import GlobalStyle from '../components/globalStyle';
 import putQuestionHelpful from '../api/putquestionhelpful';
 
 const HelpfulQuestion = ({helpfulBody}) => {
-  console.log('helpfulBody', helpfulBody);
   const helpfulCount = helpfulBody.question_helpfulness;
   const questionId = helpfulBody.question_id;
   const [count, setCount] = useState(helpfulCount);

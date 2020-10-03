@@ -5,8 +5,6 @@ import GlobalStyle from '../components/globalStyle';
 
 const ProductQuestion = (productQuestion) => {
   const newProductQuestion = productQuestion.productQuestion;
-  console.log('questionss', newProductQuestion);
-  console.log('question answers array', newProductQuestion.answers);
   return (
     <>
       <GlobalStyle />

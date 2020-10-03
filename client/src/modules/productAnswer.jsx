@@ -5,10 +5,14 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import GlobalStyle from '../components/globalStyle';
 import ProductQuestion from './productQuestion.jsx';
+import HelpfulAnswer from './answerHelpful.jsx'
+
 // eslint-disable-next-line no-unused-vars
 const ProductAnswer = ({answer}) => {
+  const answerHelpful = answer.helpfulness;
+  console.log('2 answer', answer, answerHelpful);
 
-  console.log('answer', answer);
+  console.log('answerhelp', answer.helpfulness);
   return (
     <div className="answer">
       <GlobalStyle />
@@ -25,9 +29,7 @@ const ProductAnswer = ({answer}) => {
               }
             </div>
             <div className="col-md-3">
-              {
-                `helpful yes(${answer.helpfulness})`
-              }
+              <HelpfulAnswer helpfulBody={answer} />
             </div>
             <div className="col-md-3">
               report
