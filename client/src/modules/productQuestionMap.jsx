@@ -9,7 +9,7 @@ import getProductQuestionGet from '../api/getproductquestion';
 import GlobalStyle from '../components/globalStyle';
 
 const ProductQuestionMap = () => {
-  const [productId] = useState(10);// this will be whatever product Id is being viewed
+  const [productId] = useState(3);// this will be whatever product Id is being viewed
   const [productQuestionObject, setProductQuestionObject] = useState([]);
 
   useEffect(() => {

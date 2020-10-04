@@ -5,14 +5,12 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import GlobalStyle from '../components/globalStyle';
 import ProductQuestion from './productQuestion.jsx';
-import HelpfulAnswer from './answerHelpful.jsx'
+import HelpfulAnswer from './answerHelpful.jsx';
+import ProductPhotos from './ProductAnswerPhotos.jsx';
 
 // eslint-disable-next-line no-unused-vars
 const ProductAnswer = ({answer}) => {
   const answerHelpful = answer.helpfulness;
-  console.log('2 answer', answer, answerHelpful);
-
-  console.log('answerhelp', answer.helpfulness);
   return (
     <div className="answer">
       <GlobalStyle />
@@ -39,7 +37,7 @@ const ProductAnswer = ({answer}) => {
         <div className="container">
           <div className="row">
             <div className="col-lg">
-              photos
+              <ProductPhotos answerBody={answer} />
             </div>
           </div>
         </div>
