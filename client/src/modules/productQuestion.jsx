@@ -1,20 +1,38 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable react/destructuring-assignment */
-import React from 'react';
-// eslint-disable-next-line arrow-body-style
-const ProductQuestionForm = (props) => {
-  // eslint-disable-next-line react/destructuring-assignment
-  // eslint-disable-next-line react/prop-types
-  const productQuestion = props.question;
-  console.log('in productQuestion render', productQuestion);
-  return (
+import React, { useState } from 'react';
+import ProductAnswerMap from './productAnswerMap.jsx';
+import HelpfulQuestion from './questionHelpful.jsx';
+import GlobalStyle from '../components/globalStyle';
 
-    <div className="lines p2-a">
-      {
-      `User: ${productQuestion.asker_name}`.concat(` asked: ${productQuestion.question_body}`)
-    }
-    </div>
+const ProductQuestion = (productQuestion) => {
+  const newProductQuestion = productQuestion.productQuestion;
+  return (
+    <>
+      <GlobalStyle />
+      <div className="container">
+        <div className="row">
+          <div className="col">
+            <div className="questions">
+              <div>
+                {
+              `  Q:  ${newProductQuestion.question_body}`
+              }
+              </div>
+              <div>
+                <ProductAnswerMap newQuestion={newProductQuestion} />
+              </div>
+            </div>
+          </div>
+          <div className="col-md-auto">
+            <HelpfulQuestion helpfulBody={newProductQuestion} />
+          </div>
+          <div className="col-md-auto">
+            Add Answer
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
+export default ProductQuestion;
 
-export default ProductQuestionForm;
+// { condition ? <div> Renders on condition </div> : <div> Doesn't render on condition</div> };

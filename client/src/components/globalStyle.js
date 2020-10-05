@@ -12,21 +12,27 @@ const GlobalStyle = createGlobalStyle`
 
   h1 {
     font-family: 'Roboto', 'sans-serif';
-    font-weight: 500;
+    font-weight: 50;
     background-color: white;
-    font-size: 28px;
+    font-size: 24px;
     color: #056676;
+    title: 'Center Title':
+    alignSelf: 'center'
   }
 
   body {
     margin: 30 auto;
     background-color: white;
     font-family: 'Ubuntu', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     color: #056676;
+    text-align: 'center'
   }
 
+
   button {
+    padding-top: 2px;
+    padding-bottom 2px;
     background-color: white;
     font-family: 'Ubuntu', sans-serif;
     border-color: #056676;
@@ -37,6 +43,7 @@ const GlobalStyle = createGlobalStyle`
     text-align: center;
   }
 
+
   button:hover {
     color: #e8ded2;
     border: 2px solid #056676;
@@ -45,5 +52,48 @@ const GlobalStyle = createGlobalStyle`
     transition-timing-function: ease-in;
     transition: .3s;
   }
+  .helpfulbutton {
+    padding-top: 2px;
+    padding-bottom 2px;
+    background-color: white;
+    font-family: 'Ubuntu', sans-serif;
+    color: #a29b93;
+    border: none;
+    padding: none;
+    border-radius: none
+    text-align: center;
+  }
+  .questions{
+    padding-top: 6px;
+    padding-bottom 6px;
+  }
+
+  .answer {
+    padding-top: 6px;
+    padding-bottom 6px;
+    font-family: 'Roboto', 'sans-serif';
+    font-size: 16px;
+    color: #5EAAA8;
+  }
+
+  .answerInfo{
+    padding-top: 2px;
+    padding-bottom 2px;
+    font-family: 'Roboto', 'sans-serif';
+    font-size: 12px;
+    color: #a29b93;
+  }
+
+  .loadMoreAnswers{
+    padding-top: 2px;
+    padding-bottom 2px;
+    font-family: 'Roboto', 'sans-serif';
+    font-size: 16px;
+    font-weight: bold;
+    color: #a29b93;
+    text-align: left;
+  }
+
+
 `;
 export default GlobalStyle;
