@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import GlobalStyle from './globalStyle';
 import ProductQuestionMap from '../modules/productQuestionMap.jsx';
+import AddQuestion from '../modules/addQuestion.jsx';
 // import ProductQuestionForm from '../modules/productQuestion.jsx';
 
 const App = () => (
@@ -12,13 +13,6 @@ const App = () => (
       <div className="row">
         <div className="col">
           <ProductQuestionMap />
-        </div>
-      </div>
-    </div>
-    <div className="container">
-      <div className="row">
-        <div className="col-md-auto">
-          <button type="submit"> Add a Question </button>
         </div>
       </div>
     </div>

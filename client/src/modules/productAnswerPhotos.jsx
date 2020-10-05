@@ -6,8 +6,6 @@ const ProductPhotos = ({answerBody}) => {
     const photoValues = Object.values(answerBody.photos);
     if(photoValues.length > 0) {
       const pic = photoValues[0].url.toString();
-      console.log(pic);
-
 
 
   // if(answerBody.photos.length > 1){

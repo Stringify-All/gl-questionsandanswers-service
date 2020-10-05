@@ -6,6 +6,7 @@ import React, { useState, useEffect } from 'react';
 import Accordion from 'react-bootstrap/Accordion';
 import ProductQuestion from './productQuestion.jsx';
 import getProductQuestionGet from '../api/getproductquestion';
+import AddQuestion from './addQuestion.jsx';
 import GlobalStyle from '../components/globalStyle';
 
 const ProductQuestionMap = () => {
@@ -16,6 +17,7 @@ const ProductQuestionMap = () => {
     getProductQuestionGet(productId)
       .then((res) => {
         setProductQuestionObject(res.data.results);
+        console.log(res.data)
       })
       .catch((err) => {
         throw err;
@@ -26,6 +28,7 @@ const ProductQuestionMap = () => {
   const [boolean, setBoolean] = useState(true);
 
   return (
+    <div>
     <div className="button">
       <div className="container">
         <div className="row">
@@ -55,6 +58,14 @@ const ProductQuestionMap = () => {
         </div>
       </div>
     </div>
+    <div className="container">
+              <div className="row">
+                <div className="col-md-auto">
+                  <AddQuestion productQuestion={productId} />
+                </div>
+              </div>
+            </div>
+  </div>
   );
 };
 
