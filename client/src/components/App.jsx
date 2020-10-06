@@ -6,7 +6,7 @@ import AddQuestion from '../modules/addQuestion.jsx';
 // import ProductQuestionForm from '../modules/productQuestion.jsx';
 
 const App = () => (
-  <>
+  <div>
     <GlobalStyle />
     <div className="container">
       <h1> Questions and Answers</h1>
@@ -16,7 +16,7 @@ const App = () => (
         </div>
       </div>
     </div>
-  </>
+  <div/>
 );
 
 export default App;
