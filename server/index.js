@@ -4,11 +4,13 @@ const app = express();
 const PORT = 9002;
 const getApiData = require('./api-helper.js');
 const ServerStyleSheet = require('styled-components');
+const cors = require('cors');
 
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.use(express.static(__dirname + '/../client/dist'));
+app.use(express.static('/../client/dist'));
 
 // Requests here
 

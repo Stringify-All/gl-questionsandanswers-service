@@ -17,14 +17,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Stringify-All/kg-product-detail-page.git"
+    "url": "git+https://github.com/Stringify-All/gl-questionsandanswers-service"
   },
   "author": "Scrumdog Millionaires",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Stringify-All/kg-product-detail-page/issues"
+    "url": "https://github.com/Stringify-All/gl-questionsandanswers-service"
   },
-  "homepage": "https://github.com/Stringify-All/kg-product-detail-page#readme",
+  "homepage": "https://github.com/Stringify-All/gl-questionsandanswers-service/blob/master/README.md",
   "dependencies": {
     "@babel/core": "^7.11.6",
     "@babel/preset-env": "^7.11.5",
