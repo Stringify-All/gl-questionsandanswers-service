@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import GlobalStyle from '../components/globalStyle';
+
 import putAnswerHelpful from '../api/putanswerhelpful';
 
 const HelpfulAnswer = ({helpfulBody}) => {
@@ -25,14 +25,13 @@ const HelpfulAnswer = ({helpfulBody}) => {
     };
 
     return (
-      <div>
-        <GlobalStyle />
-        Is the question Helpful?
+      <span>
+        Helpful?
         <button className="helpfulbutton" type="submit" onClick={(helpfulClick)}> Yes </button>
         {
         `${((clicked))}`
         }
-      </div>
+      </span>
     );
   }
   return (

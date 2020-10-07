@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import GlobalStyle from '../components/globalStyle';
 import putQuestionHelpful from '../api/putquestionhelpful';
 
 const HelpfulQuestion = ({helpfulBody}) => {
@@ -28,7 +27,6 @@ const HelpfulQuestion = ({helpfulBody}) => {
 
   return (
     <div>
-      <GlobalStyle />
       {
       `Is the question Helpful?`
 }
