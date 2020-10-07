@@ -89,3 +89,26 @@
   width: 90px;
   display: flex; flex-direction: row;
 }
+
+.glaqb {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  background-color: white;
+  font-family: 'Ubuntu', sans-serif;
+  border-color: #056676;
+  color: #056676;
+  border: 1px solid-#e8ded2;
+  border-radius: 2px;
+  padding: 5px 20px;
+  text-align: center;
+}
+
+.glqmt {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  font-family: 'Roboto', 'sans-serif';
+  font-size: 16px;
+  border: 1px solid-#e8ded2;
+  color: #5EAAA8;
+  text-align: center;
+}

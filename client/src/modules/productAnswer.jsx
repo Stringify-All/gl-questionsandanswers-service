@@ -20,7 +20,7 @@ const ProductAnswer = ({ answer }) => {
         {
           `A:  ${answer.body}`
         }
-        <div className="answerInfo">
+        <div className="glanswerInfo">
 
           <Row>
             <Col xs={4}>
