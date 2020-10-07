@@ -39,15 +39,16 @@ button:hover {
   transition-timing-function: ease-in;
   transition: .3s;
 }
+
 .helpfulbutton {
   padding-top: 2px;
   padding-bottom: 2px;
   background-color: white;
   font-family: 'Ubuntu', sans-serif;
   color: #a29b93;
-  border: none;
-  padding: none;
-  border-radius: none
+  border: 0;
+  padding: 0;
+  border-radius: 0;
 
 }
 .questions{
@@ -79,4 +80,12 @@ button:hover {
   font-weight: bold;
   color: #a29b93;
   text-align: left;
+}
+
+.photos {
+  border: 1px solid  #056676;
+  border-radius: 10px;
+  padding: 3px;
+  width: 90px;
+  display: flex; flex-direction: row;
 }

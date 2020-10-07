@@ -29,42 +29,42 @@ const ProductQuestionMap = () => {
 
   return (
     <div>
-    <div className="button">
+      <div>
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-auto">
+              {mappedProductQuestion.slice(0, 2)}
+              {mappedProductQuestion.length > 2 && (
+                <Accordion>
+                  <Accordion.Collapse eventKey="0">
+                    <div>
+                      {mappedProductQuestion.slice(2)}
+                    </div>
+                  </Accordion.Collapse>
+                  <Accordion.Toggle
+                    className="button"
+                    varient="link"
+                    eventKey="0"
+                    onClick={() => setBoolean(!boolean)}
+                  >
+                    {boolean && 'Load More Questions'}
+                    {' '}
+                    {!boolean && 'See Less Questions'}
+                  </Accordion.Toggle>
+                </Accordion>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="container">
         <div className="row">
-          <div className="col-sm-auto">
-            {mappedProductQuestion.slice(0, 2)}
-            {mappedProductQuestion.length > 2 && (
-            <Accordion>
-              <Accordion.Collapse eventKey="0">
-                <div>
-                  {mappedProductQuestion.slice(2)}
-                </div>
-              </Accordion.Collapse>
-              <Accordion.Toggle
-                className="button"
-                varient="link"
-                eventKey="0"
-                onClick={() => setBoolean(!boolean)}
-              >
-                {boolean && 'Load More Questions'}
-                {' '}
-                {!boolean && 'See Less Questions'}
-              </Accordion.Toggle>
-            </Accordion>
-            )}
+          <div className="col-md-auto">
+            <AddQuestion productQuestion={productId} />
           </div>
         </div>
       </div>
     </div>
-    <div className="container">
-              <div className="row">
-                <div className="col-md-auto">
-                  <AddQuestion productQuestion={productId} />
-                </div>
-              </div>
-            </div>
-  </div>
   );
 };
 

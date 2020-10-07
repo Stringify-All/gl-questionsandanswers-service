@@ -25,13 +25,13 @@ const HelpfulAnswer = ({helpfulBody}) => {
     };
 
     return (
-      <div>
-        Is the question Helpful?
+      <span>
+        Helpful?
         <button className="helpfulbutton" type="submit" onClick={(helpfulClick)}> Yes </button>
         {
         `${((clicked))}`
         }
-      </div>
+      </span>
     );
   }
   return (

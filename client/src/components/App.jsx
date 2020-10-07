@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import ProductQuestionMap from '../modules/productQuestionMap.jsx';
 import AddQuestion from '../modules/addQuestion.jsx';
-import './main.css'
+import './main.css';
 // import ProductQuestionForm from '../modules/productQuestion.jsx';
 
 const App = () => (

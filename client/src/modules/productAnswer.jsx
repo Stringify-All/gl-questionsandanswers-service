@@ -3,49 +3,57 @@ import React from 'react';
 import Accordion from 'react-bootstrap/Accordion';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
 import ProductQuestion from './productQuestion.jsx';
 import HelpfulAnswer from './answerHelpful.jsx';
 import ProductPhotos from './ProductAnswerPhotos.jsx';
 
 // eslint-disable-next-line no-unused-vars
-const ProductAnswer = ({answer}) => {
-  console.log('answerphoto', answer.photos);
+const ProductAnswer = ({ answer }) => {
   const answerHelpful = answer.helpfulness;
   return (
-    <div className="answer">
+    <Container>
 
-      {
-      `A:  ${answer.body}`
-      }
-      <div className="answerInfo">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-3">
+      <div className="answer">
+        {
+          `A:  ${answer.body}`
+        }
+        <div className="answerInfo">
+
+          <Row>
+            <Col xs={4}>
               {
                 `by ${answer.answerer_name}`// .concat(` ${answer.date}`) need to format
               }
-            </div>
-            <div className="col-md-3">
+            </Col>
+            <Col xs={4}>
               <HelpfulAnswer helpfulBody={answer} />
-            </div>
-            <div className="col-md-3">
+            </Col>
+            <Col xs={2}>
               report
-            </div>
-          </div>
+            </Col>
+          </Row>
         </div>
-        <div className="container">
-          <div className="row">
-            <div className="col-lg">
-              <ProductPhotos answerBody={answer} />
-            </div>
-          </div>
-        </div>
+        <Container>
+          <Row>
+            {answer.photos !== undefined
+              ? answer.photos.map((photos) => (
+                <ProductPhotos
+                  photos={photos}
+                  key={photos.id}
+                />
+              ))
+              : null}
+          </Row>
+        </Container>
       </div>
-    </div>
+    </Container>
+
   );
 };
 export default ProductAnswer;
-//{rating !== null && <Box ml={2}>{labels[hover !== -1 ? hover : rating]}</Box>}
+// {rating !== null && <Box ml={2}>{labels[hover !== -1 ? hover : rating]}</Box>}
 
 // { condition ? <div> Renders on condition </div> : <div> Doesn't render on condition</div> }
-

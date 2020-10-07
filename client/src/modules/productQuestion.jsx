@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import ProductAnswerMap from './productAnswerMap.jsx';
 import HelpfulQuestion from './questionHelpful.jsx';
 
-
 const ProductQuestion = (productQuestion) => {
   const newProductQuestion = productQuestion.productQuestion;
   return (

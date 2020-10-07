@@ -8,7 +8,7 @@ const addClicked = (event) => {
   event.preventDefault()
 }
   return (
-    <button type="submit" onClick={addClicked}> Add a Question </button>
+    <button class="button" type="submit" onClick={addClicked}> Add a Question </button>
   )
 }
 
