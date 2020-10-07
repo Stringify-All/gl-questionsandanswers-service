@@ -16,7 +16,7 @@ const ProductAnswer = ({ answer }) => {
   return (
     <Container>
 
-      <div className="answer">
+      <div className="glanswer">
         {
           `A:  ${answer.body}`
         }

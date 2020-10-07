@@ -30,7 +30,7 @@ const HelpfulQuestion = ({helpfulBody}) => {
       {
       `Is the question Helpful?`
 }
-      <button className="helpfulbutton" type="submit" onClick={(helpfulClick)}> Yes </button>
+      <button className="glhelpfulbutton" type="submit" onClick={(helpfulClick)}> Yes </button>
       {
       `${((clicked))}`
       }

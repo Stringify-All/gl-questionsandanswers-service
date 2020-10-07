@@ -1,4 +1,4 @@
-h1 {
+.glh1 {
   font-family: 'Roboto', 'sans-serif';
   font-weight: 50;
   background-color: white;
@@ -7,7 +7,7 @@ h1 {
 
 }
 
-body {
+.glbody {
   margin: 30 auto;
   background-color: white;
   font-family: 'Ubuntu', sans-serif;
@@ -17,7 +17,7 @@ body {
 }
 
 
-button {
+.glbutton {
   padding-top: 2px;
   padding-bottom: 2px;
   background-color: white;
@@ -31,7 +31,7 @@ button {
 }
 
 
-button:hover {
+.glbutton:hover {
   color: #e8ded2;
   border: 2px solid #056676;
   background: #056676;
@@ -40,7 +40,7 @@ button:hover {
   transition: .3s;
 }
 
-.helpfulbutton {
+.glhelpfulbutton {
   padding-top: 2px;
   padding-bottom: 2px;
   background-color: white;
@@ -51,12 +51,12 @@ button:hover {
   border-radius: 0;
 
 }
-.questions{
+.glquestions{
   padding-top: 6px;
   padding-bottom: 6px;
 }
 
-.answer {
+.glanswer {
   padding-top: 6px;
   padding-bottom: 6px;
   font-family: 'Roboto', 'sans-serif';
@@ -64,7 +64,7 @@ button:hover {
   color: #5EAAA8;
 }
 
-.answerInfo{
+.glanswerInfo{
   padding-top: 2px;
   padding-bottom: 2px;
   font-family: 'Roboto', 'sans-serif';
@@ -72,7 +72,7 @@ button:hover {
   color: #a29b93;
 }
 
-.loadMoreAnswers{
+.glloadMoreAnswers{
   padding-top: 2px;
   padding-bottom: 2px;
   font-family: 'Roboto', 'sans-serif';
@@ -82,7 +82,7 @@ button:hover {
   text-align: left;
 }
 
-.photos {
+.glphotos {
   border: 1px solid  #056676;
   border-radius: 10px;
   padding: 3px;

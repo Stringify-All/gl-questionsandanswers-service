@@ -7,6 +7,7 @@ import './main.css';
 
 const App = () => (
   <div>
+    <body className="glbody">
     <div className="container">
       <h1> Questions and Answers</h1>
       <div className="row">
@@ -15,6 +16,7 @@ const App = () => (
         </div>
       </div>
     </div>
+    </body>
   </div>
 );
 

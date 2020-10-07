@@ -9,7 +9,7 @@ const ProductQuestion = (productQuestion) => {
       <div className="container">
         <div className="row">
           <div className="col">
-            <div className="questions">
+            <div className="glquestions">
               <div>
                 {
               `  Q:  ${newProductQuestion.question_body}`

@@ -42,7 +42,7 @@ const ProductQuestionMap = () => {
                     </div>
                   </Accordion.Collapse>
                   <Accordion.Toggle
-                    className="button"
+                    className="glbutton"
                     varient="link"
                     eventKey="0"
                     onClick={() => setBoolean(!boolean)}

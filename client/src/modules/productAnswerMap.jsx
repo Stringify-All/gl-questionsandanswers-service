@@ -31,8 +31,7 @@ const ProductAnswerMap = ({ newQuestion }) => {
   const [boolean, setBoolean] = useState(true);
 
   return (
-    <div className="button">
-      <div className="container">
+    <div className="container">
         <div className="row">
           <div className="col-md-auto">
             {mappedProductAnswers.slice(0, 2)}
@@ -43,7 +42,7 @@ const ProductAnswerMap = ({ newQuestion }) => {
                   {mappedProductAnswers.slice(2)}
                 </div>
               </Accordion.Collapse>
-              <Accordion.Toggle className="button" varient="link" eventKey="0"
+              <Accordion.Toggle className="glbutton" varient="link" eventKey="0"
                 onClick={() => setBoolean(!boolean)}
               >
                 {boolean && 'Load More Answers'} {!boolean && 'See Less Answers'}
@@ -53,7 +52,6 @@ const ProductAnswerMap = ({ newQuestion }) => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
 
