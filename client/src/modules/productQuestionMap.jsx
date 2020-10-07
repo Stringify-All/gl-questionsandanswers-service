@@ -7,7 +7,7 @@ import Accordion from 'react-bootstrap/Accordion';
 import ProductQuestion from './productQuestion.jsx';
 import getProductQuestionGet from '../api/getproductquestion';
 import AddQuestion from './addQuestion.jsx';
-import GlobalStyle from '../components/globalStyle';
+
 
 const ProductQuestionMap = () => {
   const [productId] = useState(3);// this will be whatever product Id is being viewed
@@ -33,7 +33,6 @@ const ProductQuestionMap = () => {
       <div className="container">
         <div className="row">
           <div className="col-sm-auto">
-            <GlobalStyle />
             {mappedProductQuestion.slice(0, 2)}
             {mappedProductQuestion.length > 2 && (
             <Accordion>

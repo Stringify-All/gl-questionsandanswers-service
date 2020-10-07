@@ -3,17 +3,16 @@ import React from 'react';
 import Accordion from 'react-bootstrap/Accordion';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import GlobalStyle from '../components/globalStyle';
 import ProductQuestion from './productQuestion.jsx';
 import HelpfulAnswer from './answerHelpful.jsx';
 import ProductPhotos from './ProductAnswerPhotos.jsx';
 
 // eslint-disable-next-line no-unused-vars
 const ProductAnswer = ({answer}) => {
+  console.log('answerphoto', answer.photos);
   const answerHelpful = answer.helpfulness;
   return (
     <div className="answer">
-      <GlobalStyle />
 
       {
       `A:  ${answer.body}`

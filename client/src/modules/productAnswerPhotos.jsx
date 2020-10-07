@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import GlobalStyle from '../components/globalStyle';
+
 
 const ProductPhotos = ({answerBody}) => {
   if (answerBody.photos !== undefined) {

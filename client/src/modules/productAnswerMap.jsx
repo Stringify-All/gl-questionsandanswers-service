@@ -10,7 +10,7 @@ import Accordion from 'react-bootstrap/Accordion';
 import Card from 'react-bootstrap/Card';
 import getProductAnswerGet from '../api/getproductanswer';
 import ProductAnswer from './productAnswer.jsx';
-import GlobalStyle from '../components/globalStyle';
+
 
 const ProductAnswerMap = ({ newQuestion }) => {
   const questionId = newQuestion.question_id;
@@ -35,7 +35,6 @@ const ProductAnswerMap = ({ newQuestion }) => {
       <div className="container">
         <div className="row">
           <div className="col-md-auto">
-            <GlobalStyle />
             {mappedProductAnswers.slice(0, 2)}
             {mappedProductAnswers.length > 2 && (
             <Accordion>

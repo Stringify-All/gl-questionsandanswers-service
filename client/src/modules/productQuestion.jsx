@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import ProductAnswerMap from './productAnswerMap.jsx';
 import HelpfulQuestion from './questionHelpful.jsx';
-import GlobalStyle from '../components/globalStyle';
+
 
 const ProductQuestion = (productQuestion) => {
   const newProductQuestion = productQuestion.productQuestion;
   return (
     <>
-      <GlobalStyle />
       <div className="container">
         <div className="row">
           <div className="col">
