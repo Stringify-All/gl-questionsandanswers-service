@@ -60,7 +60,10 @@ const ProductQuestionMap = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-auto">
-            <AddQuestion productQuestion={productId} />
+            <AddQuestion
+              productQuestion={productId}
+              newQuestion={setProductQuestionObject}
+            />
           </div>
         </div>
       </div>

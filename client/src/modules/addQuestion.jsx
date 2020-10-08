@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Modal, Button } from 'react-bootstrap';
 import AddQuestionForm from './addQuestionForm.jsx';
 
-const AddQuestion = ({ productQuestion }) => {
+const AddQuestion = ({ productQuestion, newQuestion }) => {
   console.log('productQuestion', productQuestion);
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -21,14 +21,13 @@ const AddQuestion = ({ productQuestion }) => {
         </Modal.Header>
         <Modal.Body>
           <AddQuestionForm
-          productQuestion={productQuestion}
-          show={show}
-          handleClose={handleClose}
-          handleShow={handleShow}
+            productQuestion={productQuestion}
+            show={show}
+            handleClose={handleClose}
+            handleShow={handleShow}
+            newQuestion={newQuestion}
           />
-          </Modal.Body>
-        <Modal.Footer>
-        </Modal.Footer>
+        </Modal.Body>
       </Modal>
     </>
   );
