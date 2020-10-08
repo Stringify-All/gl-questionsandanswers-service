@@ -1,3 +1,5 @@
+/* eslint-disable import/no-named-as-default */
+/* eslint-disable import/no-named-as-default-member */
 /* eslint-disable react/prop-types */
 /* eslint-disable import/no-cycle */
 /* eslint-disable react/jsx-one-expression-per-line */
@@ -10,7 +12,7 @@ import Accordion from 'react-bootstrap/Accordion';
 import Card from 'react-bootstrap/Card';
 import getProductAnswerGet from '../api/getproductanswer';
 import ProductAnswer from './productAnswer.jsx';
-
+import SearchBar from './searchBar.jsx';
 
 const ProductAnswerMap = ({ newQuestion }) => {
   const questionId = newQuestion.question_id;
@@ -31,8 +33,9 @@ const ProductAnswerMap = ({ newQuestion }) => {
   const [boolean, setBoolean] = useState(true);
 
   return (
+    <>
     <div className="container">
-        <div className="row">
+      <div className="row">
           <div className="col-md-auto">
             {mappedProductAnswers.slice(0, 2)}
             {mappedProductAnswers.length > 2 && (
@@ -52,6 +55,7 @@ const ProductAnswerMap = ({ newQuestion }) => {
           </div>
         </div>
       </div>
+      </>
   );
 };
 
