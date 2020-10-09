@@ -29,37 +29,32 @@ const ProductQuestionMap = () => {
 
   return (
     <div>
-      <div>
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-auto">
-              {mappedProductQuestion.slice(0, 2)}
-              {mappedProductQuestion.length > 2 && (
-                <Accordion>
-                  <Accordion.Collapse eventKey="0">
-                    <div>
-                      {mappedProductQuestion.slice(2)}
-                    </div>
-                  </Accordion.Collapse>
-                  <Accordion.Toggle
-                    className="glbutton"
-                    varient="link"
-                    eventKey="0"
-                    onClick={() => setBoolean(!boolean)}
-                  >
-                    {boolean && 'Load More Questions'}
-                    {' '}
-                    {!boolean && 'See Less Questions'}
-                  </Accordion.Toggle>
-                </Accordion>
-              )}
-            </div>
-          </div>
-        </div>
-      </div>
       <div className="container">
         <div className="row">
-          <div className="col-md-auto">
+
+          <div className="col-sm-auto">
+            {mappedProductQuestion.slice(0, 2)}
+            {mappedProductQuestion.length > 2 && (
+              <Accordion>
+                <Accordion.Collapse eventKey="0">
+                  <div>
+                    {mappedProductQuestion.slice(2)}
+                  </div>
+                </Accordion.Collapse>
+                <Accordion.Toggle
+                  className="glbutton"
+                  varient="link"
+                  eventKey="0"
+                  onClick={() => setBoolean(!boolean)}
+                >
+                  {boolean && 'Load More Questions'}
+                  {' '}
+                  {!boolean && 'See Less Questions'}
+                </Accordion.Toggle>
+              </Accordion>
+            )}
+          </div>
+          <div className="col-sm-auto">
             <AddQuestion
               productQuestion={productId}
               newQuestion={setProductQuestionObject}
