@@ -10,6 +10,9 @@
 import React, { useState, useEffect } from 'react';
 import Accordion from 'react-bootstrap/Accordion';
 import Card from 'react-bootstrap/Card';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
 import getProductAnswerGet from '../api/getproductanswer';
 import ProductAnswer from './productAnswer.jsx';
 import SearchBar from './searchBar.jsx';
@@ -34,8 +37,8 @@ const ProductAnswerMap = ({ newQuestion }) => {
 
   return (
     <>
-    <div className="container">
-      <div className="row">
+    <Container>
+      <Row>
           <div className="col-md-auto">
             {mappedProductAnswers.slice(0, 2)}
             {mappedProductAnswers.length > 2 && (
@@ -45,7 +48,7 @@ const ProductAnswerMap = ({ newQuestion }) => {
                   {mappedProductAnswers.slice(2)}
                 </div>
               </Accordion.Collapse>
-              <Accordion.Toggle className="glbutton" varient="link" eventKey="0"
+              <Accordion.Toggle className="gl-button" varient="link" eventKey="0"
                 onClick={() => setBoolean(!boolean)}
               >
                 {boolean && 'Load More Answers'} {!boolean && 'See Less Answers'}
@@ -53,8 +56,8 @@ const ProductAnswerMap = ({ newQuestion }) => {
             </Accordion>
             )}
           </div>
-        </div>
-      </div>
+              </Row>
+      </Container>
       </>
   );
 };

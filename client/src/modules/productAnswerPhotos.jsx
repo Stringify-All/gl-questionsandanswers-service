@@ -7,7 +7,7 @@ const ProductPhotos = ({photos}) => {
   return (
 
     <div className="col-sm-3">
-      <Image className="glphotos" src={`${photos.url}/120x120`} />
+      <Image className="gl-photos" src={`${photos.url}/120x120`} />
     </div>
 
   );

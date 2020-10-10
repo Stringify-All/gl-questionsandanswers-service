@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
 import ProductAnswerMap from './productAnswerMap.jsx';
 import HelpfulQuestion from './questionHelpful.jsx';
 
@@ -6,28 +9,28 @@ const ProductQuestion = (productQuestion) => {
   const newProductQuestion = productQuestion.productQuestion;
   return (
     <>
-      <div className="container">
-        <div className="row">
-          <div className="col">
-            <div className="glquestions">
-              <div>
+    <Container>
+      <Row>
+        <Col>
+            <div className="gl-questions">
                 {
               `  Q:  ${newProductQuestion.question_body}`
               }
               </div>
-              <div>
+              <Col>
                 <ProductAnswerMap newQuestion={newProductQuestion} />
-              </div>
-            </div>
-          </div>
-          <div className="col-md-auto">
+                </Col>
+          </Col>
+          <Col>
             <HelpfulQuestion helpfulBody={newProductQuestion} />
-          </div>
-          <div className="col-md-auto">
+            </Col>
+            <Col>
             Add Answer
-          </div>
-        </div>
-      </div>
+          </Col>
+
+
+        </Row>
+      </Container>
     </>
   );
 };

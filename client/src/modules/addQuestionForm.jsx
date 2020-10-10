@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Form, Button } from 'react-bootstrap';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
 import getProductQuestionGet from '../api/getproductquestion';
 import postQuestion from '../api/postAddQuestion';
 
@@ -70,10 +73,10 @@ const AddQuestionForm = ({
         </Form.Text>
       </Form.Group>
 
-      <button className="glaqb" type="submit" onClick={handleClose}>
+      <button className="gl-aqb" type="submit" onClick={handleClose}>
         Cancel Question
       </button>
-      <button className="glaqb" type="submit" onClick={handleClose}>
+      <button className="gl-aqb" type="submit" onClick={handleClose}>
         Submit Question
       </button>
     </Form>

@@ -15,12 +15,11 @@ const ProductAnswer = ({ answer }) => {
   const answerHelpful = answer.helpfulness;
   return (
     <Container>
-
-      <div className="glanswer">
+      <div className="gl-answer">
         {
           `A:  ${answer.body}`
         }
-        <div className="glanswerInfo">
+        <div className="gl-answerInfo">
 
           <Row>
             <Col xs={4}>

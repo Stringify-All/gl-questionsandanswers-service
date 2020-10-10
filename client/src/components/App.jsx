@@ -1,5 +1,8 @@
 /* eslint-disable import/extensions */
 import React, { useState } from 'react';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
 import ProductQuestionMap from '../modules/productQuestionMap.jsx';
 import AddQuestion from '../modules/addQuestion.jsx';
 import SearchBar from '../modules/searchBar.jsx';
@@ -8,16 +11,16 @@ import './main.css';
 
 const App = () => (
   <div>
-    <body className="glbody">
-    <div className="container">
-      <h1> Questions and Answers</h1>
-      <SearchBar />
-      <div className="row">
-        <div className="col">
-          <ProductQuestionMap />
-        </div>
-      </div>
-    </div>
+    <body className="gl-body">
+      <Container>
+        <h1> Questions and Answers</h1>
+        <SearchBar />
+        <Row>
+          <Col>
+            <ProductQuestionMap />
+          </Col>
+        </Row>
+      </Container>
     </body>
   </div>
 );

@@ -31,7 +31,6 @@ const ProductQuestionMap = () => {
     <div>
       <div className="container">
         <div className="row">
-
           <div className="col-sm-auto">
             {mappedProductQuestion.slice(0, 2)}
             {mappedProductQuestion.length > 2 && (
@@ -42,7 +41,7 @@ const ProductQuestionMap = () => {
                   </div>
                 </Accordion.Collapse>
                 <Accordion.Toggle
-                  className="glbutton"
+                  className="gl-button"
                   varient="link"
                   eventKey="0"
                   onClick={() => setBoolean(!boolean)}

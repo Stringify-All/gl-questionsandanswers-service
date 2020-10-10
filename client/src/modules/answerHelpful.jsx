@@ -27,7 +27,7 @@ const HelpfulAnswer = ({helpfulBody}) => {
     return (
       <span>
         Helpful?
-        <button className="glhelpfulbutton" type="submit" onClick={(helpfulClick)}> Yes </button>
+        <button className="gl-helpfulbutton" type="submit" onClick={(helpfulClick)}> Yes </button>
         {
         `${((clicked))}`
         }
