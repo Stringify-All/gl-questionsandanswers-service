@@ -1,7 +1,10 @@
-import React, { useState, useEffect } from 'react';
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
+
+import React, { useState } from 'react';
 import putQuestionHelpful from '../api/putquestionhelpful';
 
-const HelpfulQuestion = ({helpfulBody}) => {
+const HelpfulQuestion = ({ helpfulBody }) => {
   const helpfulCount = helpfulBody.question_helpfulness;
   const questionId = helpfulBody.question_id;
   const [count, setCount] = useState(helpfulCount);
@@ -19,20 +22,14 @@ const HelpfulQuestion = ({helpfulBody}) => {
       .catch((err) => {
         throw err;
       });
-  }
-
-
-
-
-
+  };
   return (
     <div>
-      {
-      `Is the question Helpful?`
-}
+      Is the question Helpful?
+
       <button className="gl-helpfulbutton" type="submit" onClick={(helpfulClick)}> Yes </button>
       {
-      `${((clicked))}`
+      `  (${((clicked))})  `
       }
     </div>
   );

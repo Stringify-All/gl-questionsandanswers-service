@@ -14,7 +14,7 @@ const AddAnswer = ({ productId, productBody }) => {
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>
-            <div className="gl-qmt">
+            <div className="gl-amt">
               {
                 ` ${productBody}`
   }

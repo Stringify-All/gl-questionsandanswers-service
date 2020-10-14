@@ -16,6 +16,15 @@
   text-align: 'center'
 }
 
+.gl-amt {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  font-family: 'Roboto', 'sans-serif';
+  font-size: 16px;
+  border-color: #fbfbfb;
+  color: #5EAAA8;
+  text-align: center;
+}
 
 .gl-button {
   padding-top: 2px;
