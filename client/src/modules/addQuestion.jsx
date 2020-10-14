@@ -11,7 +11,7 @@ const AddQuestion = ({ productQuestion }) => {
 
   return (
     <>
-      <button className="gl-button" type="submit" onClick={handleShow}> Add a Question </button>
+      <button className="gl-addQuestion" type="submit" onClick={handleShow}>       Add a Question </button>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>

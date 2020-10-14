@@ -45,7 +45,7 @@ const ProductAnswerMap = ({ newQuestion }) => {
                   {mappedProductAnswers.slice(2)}
                 </div>
               </Accordion.Collapse>
-              <Accordion.Toggle className="gl-button" varient="link" eventKey="0"
+              <Accordion.Toggle className="gl-loadMoreAnswers" varient="link" eventKey="0"
                 onClick={() => setBoolean(!boolean)}
               >
                 {boolean && 'Load More Answers'} {!boolean && 'See Less Answers'}

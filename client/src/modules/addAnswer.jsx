@@ -10,7 +10,7 @@ const AddAnswer = ({ productId, productBody }) => {
   const handleShow = () => setShow(true);
   return (
     <>
-      <button className="gl-button" type="submit" onClick={handleShow}> AddAnswer </button>
+      <button className="gl-answerbutton" type="submit" onClick={handleShow}> AddAnswer </button>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>
