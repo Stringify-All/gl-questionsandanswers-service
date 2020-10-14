@@ -59,10 +59,10 @@ const AddQuestionForm = ({
       </Form.Group>
 
       <button className="gl-aqb" type="submit" onClick={handleClose}>
-        Cancel Question
+        Cancel Answer
       </button>
       <button className="gl-aqb" type="submit" onClick={handleClose}>
-        Submit Question
+        Submit Answer
       </button>
     </Form>
   );

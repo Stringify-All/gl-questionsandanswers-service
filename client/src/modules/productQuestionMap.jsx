@@ -9,7 +9,7 @@ import getProductQuestionGet from '../api/getproductquestion';
 import AddQuestion from './addQuestion.jsx';
 
 const ProductQuestionMap = () => {
-  const [productId] = useState(3);
+  const [productId] = useState(6);
   const [productQuestionObject, setProductQuestionObject] = useState([]);
 
   useEffect(() => {
