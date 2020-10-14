@@ -1,17 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import { Form, Button } from 'react-bootstrap';
-import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
+/* eslint-disable react/prop-types */
+import React, { useState } from 'react';
+import { Form } from 'react-bootstrap';
 import getProductQuestionGet from '../api/getproductquestion';
-import postQuestion from '../api/postAddQuestion';
 
 const axios = require('axios');
 
 const AddQuestionForm = ({
-  productQuestion, show, handleClose, handleShow, newQuestion,
-}) => {
-  // const [submit, setSubmit] = useState(false);
+  productQuestion, handleClose }) => {
   const [state, setState] = useState({
     body: '',
     name: '',
@@ -27,9 +22,6 @@ const AddQuestionForm = ({
   };
 
   const SubmitQuestion = (event) => {
-    event.preventDefault();
-    console.log('in submit');
-    console.log(state.body, state.name, state.email);
     axios({
       method: 'post',
       url: `http://52.26.193.201:3000/qa/${productQuestion}`,
@@ -40,20 +32,13 @@ const AddQuestionForm = ({
       },
     })
       .then(() => {
-        handleClose();
+        event.preventDefault();
         getProductQuestionGet(productQuestion)
-          .then((res) => {
-            newQuestion(res.data.results);
-            console.log(res.data.results);
-          })
           .catch((err) => {
             throw err;
           });
-      })
-      .catch((error) => {
-        throw error;
       });
-  }
+  };
 
   return (
     <Form onSubmit={SubmitQuestion}>
@@ -69,7 +54,7 @@ const AddQuestionForm = ({
         <Form.Label>Email address</Form.Label>
         <Form.Control required as="textarea" placeholder="Enter email" maxLength="60" name="email" value={state.email} onChange={handleChange} />
         <Form.Text className="text-muted">
-          We'll never share your email with anyone else.
+          We will never share your email with anyone else.
         </Form.Text>
       </Form.Group>
 

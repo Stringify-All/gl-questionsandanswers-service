@@ -1,10 +1,9 @@
 /* eslint-disable import/extensions */
-import React, { useState } from 'react';
+import React from 'react';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import ProductQuestionMap from '../modules/productQuestionMap.jsx';
-import AddQuestion from '../modules/addQuestion.jsx';
 import SearchBar from '../modules/searchBar.jsx';
 import './main.css';
 // import ProductQuestionForm from '../modules/productQuestion.jsx';

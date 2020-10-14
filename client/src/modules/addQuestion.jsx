@@ -1,10 +1,10 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable import/extensions */
-import React, { useState, useEffect } from 'react';
-import { Modal, Button } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Modal } from 'react-bootstrap';
 import AddQuestionForm from './addQuestionForm.jsx';
 
-const AddQuestion = ({ productQuestion, newQuestion }) => {
-  console.log('productQuestion', productQuestion);
+const AddQuestion = ({ productQuestion }) => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -26,7 +26,6 @@ const AddQuestion = ({ productQuestion, newQuestion }) => {
             show={show}
             handleClose={handleClose}
             handleShow={handleShow}
-            newQuestion={newQuestion}
           />
         </Modal.Body>
       </Modal>

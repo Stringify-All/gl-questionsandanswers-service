@@ -9,13 +9,10 @@
 
 import React, { useState, useEffect } from 'react';
 import Accordion from 'react-bootstrap/Accordion';
-import Card from 'react-bootstrap/Card';
-import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import getProductAnswerGet from '../api/getproductanswer';
 import ProductAnswer from './productAnswer.jsx';
-import SearchBar from './searchBar.jsx';
 
 const ProductAnswerMap = ({ newQuestion }) => {
   const questionId = newQuestion.question_id;
@@ -37,8 +34,8 @@ const ProductAnswerMap = ({ newQuestion }) => {
 
   return (
     <>
-    <Container>
-      <Row>
+      <Container>
+        <Row>
           <div className="col-md-auto">
             {mappedProductAnswers.slice(0, 2)}
             {mappedProductAnswers.length > 2 && (
@@ -56,9 +53,9 @@ const ProductAnswerMap = ({ newQuestion }) => {
             </Accordion>
             )}
           </div>
-              </Row>
+        </Row>
       </Container>
-      </>
+    </>
   );
 };
 

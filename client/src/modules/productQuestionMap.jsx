@@ -8,16 +8,14 @@ import ProductQuestion from './productQuestion.jsx';
 import getProductQuestionGet from '../api/getproductquestion';
 import AddQuestion from './addQuestion.jsx';
 
-
 const ProductQuestionMap = () => {
-  const [productId] = useState(3);// this will be whatever product Id is being viewed
+  const [productId] = useState(3);
   const [productQuestionObject, setProductQuestionObject] = useState([]);
 
   useEffect(() => {
     getProductQuestionGet(productId)
       .then((res) => {
         setProductQuestionObject(res.data.results);
-        console.log(res.data)
       })
       .catch((err) => {
         throw err;
@@ -56,7 +54,7 @@ const ProductQuestionMap = () => {
           <div className="col-sm-auto">
             <AddQuestion
               productQuestion={productId}
-              newQuestion={setProductQuestionObject}
+              // newQuestion={setProductQuestionObject}
             />
           </div>
         </div>

@@ -1,10 +1,10 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 
 const SearchBar = () => {
   const nothing = null;
   return (
     <div className="container">
-      <h5>Bootstrap 4 Search Bar</h5>
       <div className="row">
         <div className="col-12">
           <div className="input-group">

@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from 'react';
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
+import React, { useState } from 'react';
 
 import putAnswerHelpful from '../api/putanswerhelpful';
 
-const HelpfulAnswer = ({helpfulBody}) => {
+// eslint-disable-next-line react/prop-types
+const HelpfulAnswer = ({ helpfulBody }) => {
   const helpfulCount = helpfulBody.helpfulness;
   if (helpfulCount !== undefined) {
     const questionId = helpfulBody.answer_id;
-    const [count, setCount] = useState(helpfulCount);
     const [helpfulA, sethelpfulA] = useState(false);
     const [clicked, setclicked] = useState(helpfulCount);
-    // setting state
 
     const helpfulClick = (event) => {
-      console.log('questionId in answer', questionId)
       event.preventDefault();
       sethelpfulA(!helpfulA);
       putAnswerHelpful(questionId)
