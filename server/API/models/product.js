@@ -7,7 +7,7 @@ const productSchema = new Schema (
   {
     questions: [
       {
-        question_id: ObjectId,
+        question_id: String,
         _id: false,
         question_body: String,
         question_date: {
@@ -19,7 +19,7 @@ const productSchema = new Schema (
         reported: Number,
         answers: [
           {
-            id: ObjectId,
+            id: String,
             _id: false,
             body: String,
             date: {

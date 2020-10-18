@@ -45,4 +45,36 @@ describe('API test', function() {
       })
       .then(done, done)
   })
+  it("should return the correct list of answers for an answers request", function(done) {
+    chai.request(app)
+      .get(`/qa/${testProduct.questions[0].question_id}/answers`)
+      .then((res) => {
+        let expected = JSON.stringify({
+          question: testProduct.questions[0].question_id,
+          page: 0,
+          count: 5,
+          results: testProduct.questions[0].answers
+        })
+        expect(res.text).to.equal(expected)
+        done()
+      })
+  })
+  it("should return a response with an empty results array get request is made to the questions route with a wrong id", function(done) {
+    chai.request(app)
+      .get('/qa/1/answers')
+      .then((res) => {
+        let expected = JSON.stringify({
+          "question": "1",
+          "page": 0,
+          "count": 5,
+          "results": []
+        })
+        expect(res.text).to.equal(expected)
+      })
+      .then(done, done)
+  })
+  // it("should post a new question to the database", (done) => {
+  //   chai.request(app)
+  //     .post(`/qa/`)
+  // })
 })
