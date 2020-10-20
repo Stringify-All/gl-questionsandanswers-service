@@ -1,1 +1,2 @@
 node_modules
+products.json $ git rm --cached products.json rm products.json $ git commit -m Start ignoring products.json

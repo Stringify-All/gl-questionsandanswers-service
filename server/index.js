@@ -18,6 +18,7 @@ mongoose.connect("mongodb://localhost:27017/SDC");
 
 app.get('/qa/:product_id', (req, res) => {
   Product.findById(req.params.product_id)
+    .lean()
     .exec()
     .then((dbResponse) => {
       const page = req.body.page === undefined ? 1 : req.body.page;
@@ -64,6 +65,7 @@ app.get('/qa/:product_id', (req, res) => {
 
 app.get('/qa/:question_id/answers', (req, res) => {
   Product.findOne({ 'questions.question_id': req.params.question_id })
+    .lean()
     .exec()
     .then((dbResponse) => {
       const page = req.body.page === undefined ? 1 : req.body.page;

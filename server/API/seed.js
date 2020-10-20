@@ -73,7 +73,7 @@ function writeNumberOfProducts(writer, encoding, number, callback) {
   write();
 }
 
-writeNumberOfProducts(writeProducts, 'utf-8', 1000, () => {
+writeNumberOfProducts(writeProducts, 'utf-8', 10000000, () => {
   writeProducts.end();
   const stop = new Date().getTime();
   console.log(`Seeding took ${stop - start} milliseconds`);
