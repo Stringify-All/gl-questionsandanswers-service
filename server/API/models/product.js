@@ -7,7 +7,7 @@ const productSchema = new Schema (
   {
     questions: [
       {
-        question_id: String,
+        question_id: ObjectId,
         _id: false,
         question_body: String,
         question_date: {
@@ -15,11 +15,17 @@ const productSchema = new Schema (
           default: Date.now,
         },
         asker_name: String,
-        question_helpfulness: Number,
-        reported: Number,
+        question_helpfulness: {
+          type: Number,
+          default: 0,
+        },
+        reported: {
+          type: Number,
+          default: 0,
+        },
         answers: [
           {
-            id: String,
+            id: ObjectId,
             _id: false,
             body: String,
             date: {
@@ -27,8 +33,14 @@ const productSchema = new Schema (
               default: Date.now,
             },
             answerer_name: String,
-            helpfulness: Number,
-            reported: Number,
+            helpfulness: {
+              type: Number,
+              default: 0,
+            },
+            reported: {
+              type: Number,
+              default: 0,
+            },
             photos: [
               {
                 _id: false,

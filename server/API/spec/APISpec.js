@@ -1,9 +1,11 @@
 const chai = require('chai');
 const chaiHttp = require('chai-http');
 const { expect } = chai;
+const { ObjectId } = require('mongodb');
 const mongoose = require('mongoose');
 const Product = require('../models/product.js')
 const app = require('../../index.js');
+const { enable } = require('../../index.js');
 
 chai.use(chaiHttp);
 let testProduct;
@@ -73,8 +75,26 @@ describe('API test', function() {
       })
       .then(done, done)
   })
-  // it("should post a new question to the database", (done) => {
-  //   chai.request(app)
-  //     .post(`/qa/`)
-  // })
+  it("should post a new question to the database", (done) => {
+    let questionbody = JSON.stringify(ObjectId())
+    chai.request(app)
+      .post(`/qa/${testProduct._id}`)
+      .send({
+        body: questionbody,
+        name: "stuff",
+        email: "things.com"
+      })
+      .then((res => {
+        expect(res).to.have.status(201)
+      }))
+      .then(() => {
+        Product.findOne({"questions.question_body" : questionbody})
+          .exec()
+          .then((dbResponse) => {
+            console.log('dbresponse', dbResponse)
+            expect(dbResponse.questions.length).to.equal(testProduct.questions.length + 1)
+            done()
+          })
+      })
+  })
 })

@@ -33,7 +33,7 @@ function writeNumberOfProducts(writer, encoding, number, callback) {
       let answers = [];
       for (let answerNumber = 0; answerNumber < numA; answerNumber++) {
         answers.push({
-          id: new ObjectId(),
+          id: {$oid: ObjectId()},
           body: faker.lorem.words(15),
           date: faker.date.past(),
           answerer_name: faker.internet.userName(),
@@ -46,7 +46,7 @@ function writeNumberOfProducts(writer, encoding, number, callback) {
       let questions = [];
       for (let questionNumber = 0; questionNumber < numQ; questionNumber++) {
         questions.push({
-          question_id: new ObjectId(),
+          question_id: { $oid: ObjectId() },
           question_body: faker.lorem.words(15),
           question_date: faker.date.past(),
           asker_name: faker.internet.userName(),
