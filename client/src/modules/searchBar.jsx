@@ -8,7 +8,7 @@ const SearchBar = () => {
       <div className="row">
         <div className="col-12">
           <div className="input-group">
-            <input className="form-control border-secondary py-2" type="search" placeHolder="HAVE A QUESTION? SEARCH FOR ANSWERS" />
+            <input className="form-control border-secondary py-2" type="search" placeholder="HAVE A QUESTION? SEARCH FOR ANSWERS" />
             <div className="input-group-append">
               <button className="btn btn-outline-secondary" placeholder="submit" type="button">
                 <i className="fa fa-search" />

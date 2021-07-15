@@ -11,6 +11,7 @@ import ProductPhotos from './ProductAnswerPhotos.jsx';
 
 // eslint-disable-next-line no-unused-vars
 const ProductAnswer = ({ answer }) => {
+  console.log(answer, 'answer');
   return (
     <Container>
       <div className="gl-answer">

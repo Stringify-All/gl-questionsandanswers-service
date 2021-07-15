@@ -8,8 +8,9 @@ import ProductAnswerMap from './productAnswerMap.jsx';
 import HelpfulQuestion from './questionHelpful.jsx';
 import AddAnswer from './addAnswer.jsx';
 
-const ProductQuestion = (productQuestion) => {
-  const [newProductQuestion] = useState(productQuestion.productQuestion);
+const ProductQuestion = ( {productQuestion} ) => {
+  console.log(productQuestion, 'pq in pq');
+  const [newProductQuestion] = useState(productQuestion);
   return (
     <>
       <Container>

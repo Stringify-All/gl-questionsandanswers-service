@@ -23,6 +23,7 @@ const ProductQuestionMap = () => {
   }, [productId]);
 
   const mappedProductQuestion = productQuestionObject.map((questionObject, i) => <ProductQuestion productQuestion={questionObject} keys={i} />)
+
   const [boolean, setBoolean] = useState(true);
 
   return (
@@ -54,7 +55,6 @@ const ProductQuestionMap = () => {
           <div className="col-sm-auto">
             <AddQuestion
               productQuestion={productId}
-              // newQuestion={setProductQuestionObject}
             />
           </div>
         </div>
