@@ -8,10 +8,16 @@ import SearchBar from '../modules/searchBar.jsx';
 import './main.css';
 
 const App = () => (
-  <div className="gl-body">
+  <div className="my-5">
     <Container>
-      <h1> Questions and Answers </h1>
-      <SearchBar />
+      <Col xs={12}>
+        <div className="title">
+          Questions and Answers
+        </div>
+      </Col>
+      <Col>
+        <SearchBar />
+      </Col>
       <Row>
         <Col>
           <ProductQuestionMap />

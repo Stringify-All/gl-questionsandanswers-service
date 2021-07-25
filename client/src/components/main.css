@@ -7,7 +7,7 @@
 
 }
 
-.gl-body {
+.my-5 {
   margin: 30 auto;
   background-color: white;
   font-family: 'Ubuntu', sans-serif;
@@ -143,4 +143,9 @@
   border-color: #056676;
   color: #056676;
   text-align: center;
+}
+
+.title {
+  text-align: center;
+  font-size:2em;
 }
